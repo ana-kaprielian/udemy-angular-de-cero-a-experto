@@ -1,3 +1,29 @@
 
   <app-personas></app-personas>
 
+  <br><br>
+
+  <div class="container">
+    <h1>{{tituloCalculadora}}</h1>
+    <form action="">
+      <div class="form-group">
+        <label>Operando A</label>
+        <input type="number"
+               class="form-control"
+               placeholder="Escribe operando A"
+               [(ngModel)]="operandoA"
+               name="operandoA">
+      </div>
+      <div class="form-group">
+        <label>Operando B</label>
+        <input type="number"
+               class="form-control"
+               placeholder="Escribe operando B"
+               [(ngModel)]="operandoB"
+               name="operandoB">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary" (click)="sumar()">Sumar</button>
+      <p>Resultado: {{resultado}}</p>
+    </form>
+  </div>
