@@ -1,1 +1,14 @@
-<p>persona</p>
+<p>
+  Nombre: {{ nombre }}
+  Apellido: {{ apellido }}
+  Edad: {{ getEdad() + 1 }}
+</p>
+
+<!--interpolacion-->
+<!--al liberar la presión de una tecla, se muestra luego del cuadro los caracteres ingresados-->
+<div (keyup)="0">
+  <label>Repetidor: </label>
+  <input #entrada />
+  {{ entrada.value }}
+</div>
+
