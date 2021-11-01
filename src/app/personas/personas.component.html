@@ -3,15 +3,25 @@
     <div class="col">
       <h1>Listado de personas</h1>
       <app-persona></app-persona>
+
       <br>
-      <label>Título persona</label>
+      <label>Título persona (usando binding)</label>
       <input type="text" class="form-control" (input)="modificarTitulo($event)">
       {{titulo}}
-      <br><br>
-     <button class="btn btn-primary"
+      <br>
+
+      <br>
+      <label>Título persona (usando Two way binding)</label>
+      <input type="text" class="form-control" [(ngModel)]="titulo2">
+      {{titulo2}}
+      <br>
+
+      <br>
+      <button class="btn btn-primary"
              [disabled]="deshabilitar"
              (click)="agregarPersona()">Agregar persona</button> <!-- desabilitar dinámicamente en personas.ts-->
       <p>{{ mensaje }}</p>
+
     </div>
   </div>
 </div>

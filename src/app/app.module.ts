@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {PersonasComponent} from "./personas/personas.component";
 import { PersonaComponent } from './persona/persona.component';
+import {FormsModule} from "@angular/forms";
 
 //NgModule -> Decorador: para agregar características extra.
 //Atributos: declarations, imports, providers, bootstrap
@@ -17,8 +18,8 @@ import { PersonaComponent } from './persona/persona.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    FormsModule  ],
   providers: [],
   bootstrap: [AppComponent]  // indica cómo se levanta la app
 })
