@@ -20,8 +20,10 @@
       <button class="btn btn-primary"
              [disabled]="deshabilitar"
              (click)="agregarPersona()">Agregar persona</button> <!-- desabilitar dinámicamente en personas.ts-->
-      <p>{{ mensaje }}</p>
-
+      <p *ngIf="mostrar; else sinPersona">{{ mensaje }} con el título de {{titulo2}}</p>
+      <ng-template #sinPersona>
+        <p>No se ha agregado ninguna persona.</p>
+      </ng-template>
     </div>
   </div>
 </div>
