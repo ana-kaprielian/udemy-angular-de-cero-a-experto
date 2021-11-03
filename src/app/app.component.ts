@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Persona} from "./persona/persona.model";
 
 //Component -> Decorador
 //Atributos: selector, teplateUrl, styleUrls
@@ -14,8 +15,19 @@ export class AppComponent {
   operandoA: number = 0;
   operandoB: number = 0;
   resultado: number = 0;
+  tituloListadoPersonas = 'Listado de personas - ngFor';
+  personas: Persona[] = [
+    new Persona('Wanda','Nara'),
+    new Persona('Luis','Suarez')];
+  nombreInput: string = '';
+  apellidoInput: string = '';
 
   sumar(): void{
     this.resultado = this.operandoA + this.operandoB;
+  }
+
+  agregarPersona() {
+    let persona1 = new Persona(this.nombreInput, this.apellidoInput);
+    this.personas.push(persona1)
   }
 }

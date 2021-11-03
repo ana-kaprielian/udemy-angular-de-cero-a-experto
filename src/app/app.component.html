@@ -27,3 +27,41 @@
       <p>Resultado: {{resultado}}</p>
     </form>
   </div>
+
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+  <div class="container">
+  <div class="container">
+    <div class="col">
+      <h3>{{tituloListadoPersonas}}</h3>
+    </div>
+  </div>
+  <hr>
+  <form class="form-row">
+    <div class="form-group col-md-2">  <!--form-group == mb-3 (bootstrap 5) | usamos 2 columnas de las 12 disponibles-->
+      <label for="nombre" class="visually-hidden">Nombre</label>  <!--visually-hidden == sr-only en versiones anteriores: parte del código fuente pero no se va a visualizar-->
+      <input type="text" name="nombre" id="nombre" placeholder="Nombre"
+             class="form-control" [(ngModel)]="nombreInput">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="apellido" class="visually-hidden">Apellido</label>  <!--visually-hidden == sr-only en versiones anteriores: parte del código fuente pero no se va a visualizar-->
+      <input type="text" name="apellido" id="apellido" placeholder="Apellido"
+             class="form-control" [(ngModel)]="apellidoInput">   <!--ngModel: two way binding-->
+    </div>
+  </form>
+    <div class="col">
+      <button type="submit" class="btn btn-primary" (click)="agregarPersona()">
+        Agregar
+      </button>
+    </div>
+    <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div *ngFor="let persona of personas; let i = index">
+          {{i + 1}}: {{persona.nombre}} {{persona.apellido}}
+        </div>
+      </div>
+    </div>
+  </div>
+
