@@ -1,0 +1,2 @@
+@Input -> Permite recibir información de un componente padre hacia un componente hijo.
+@Output -> Permite enviar info del componente hijo hacia el componente padre.

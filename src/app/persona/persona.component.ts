@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Persona} from "./persona.model";
 
 @Component({
   selector: 'app-persona',
@@ -14,6 +15,10 @@ export class PersonaComponent {
   getEdad():number{
     return this.edad;
   }
+
+  //se agrega "strictPropertyInitialization": false en tsconfig.json para que no se requiera inicializar los objetos.
+  @Input() persona: Persona;
+  @Input() i: number;
 
   constructor() { }
 
